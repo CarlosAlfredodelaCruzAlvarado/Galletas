@@ -2,14 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "Controllers/**/*.cs",
+      "src": "Galletas/**/*.cs",
       "use": "@vercel/dotnet"
+    },
+    {
+      "src": "clientapp/package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/clientapp/$1"
     }
   ]
 }
