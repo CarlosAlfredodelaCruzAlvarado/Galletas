@@ -2,12 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "Galletas/**/*.cs",
-      "use": "@vercel/dotnet"
+      "src": "Galletas.csproj",
+      "use": "vercel-plugin-dotnet"
     },
     {
       "src": "clientapp/package.json",
-      "use": "@vercel/next"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "clientapp/build" }
     }
   ],
   "routes": [
