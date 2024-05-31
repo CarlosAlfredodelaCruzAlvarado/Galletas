@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         builder =>
         {
-            builder.WithOrigins("http://localhost:3001", "https://your-netlify-app.netlify.app")
+            builder.WithOrigins("http://localhost:3001", "https://galletas-green.vercel.app/")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configurar el middleware de la aplicación
+// Configurar el middleware de la aplicaciÃ³n
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
